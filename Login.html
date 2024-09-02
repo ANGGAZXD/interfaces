@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* CSS untuk memposisikan form di tengah */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Mengatur tinggi halaman agar 100% dari tampilan */
+            margin: 0;
+            background-color: #f0f0f0; /* Warna latar belakang halaman */
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Mengatur isi di dalam form-container ke tengah */
+        }
+
+        .form-container img {
+            width: 150px; /* Menyesuaikan ukuran gambar */
+            margin-bottom: 15px; /* Memberikan jarak antara gambar dan form */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="button"] {
+            padding: 8px 12px;
+            margin-top: 10px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <!-- Gambar diletakkan di atas form -->
+        <img src="OIP.jpeg" alt="ikon">
+
+        <form action="">
+            <table>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" id="username"></td>    
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" id="password"></td>    
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="button" value="Back" id="backButton">
+                        <input type="button" value="Login" id="loginButton">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        // Event listener untuk tombol "Login"
+        document.getElementById('loginButton').addEventListener('click', function() {
+            window.location.href = 'home.html'; // Arahkan ke home.html
+        });
+
+        // Event listener untuk tombol "Back"
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.history.back(); // Kembali ke halaman sebelumnya
+        });
+    </script>
+</body>
+</html>
